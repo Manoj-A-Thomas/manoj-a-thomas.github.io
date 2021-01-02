@@ -42,6 +42,9 @@ ul.posts li {
     list-style: none;
 }
 
-div#MainBookTitle {
+div#BookMainTitle {
+  text-align: center;
+}
+div#BookAuthor {
   text-align: center;
 }
