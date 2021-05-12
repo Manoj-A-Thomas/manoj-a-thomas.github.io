@@ -1,5 +1,5 @@
-/*! 
- * Template Name: devAid - Bootstrpa 4 Theme for developers
+/*!
+ * Template Name: TDL - Bootstrpa 4 Theme for developers
  * Version: 2.2
  * Author: Xiaoying Riley
  * Copyright: 3rd Wave Media
@@ -322,33 +322,33 @@ pre code {
   font-size: 18px;
 }
 
-/* ======= Features Section ======= */
-.features {
+/* ======= projects Section ======= */
+.projects {
   padding: 80px 0;
   background: #17baef;
   color: #fff;
 }
 
-.features .title {
+.projects .title {
   color: #074f66;
   margin-top: 0;
   margin-bottom: 30px;
 }
 
-.features a {
+.projects a {
   color: #074f66;
 }
 
-.features a:hover {
+.projects a:hover {
   color: #042a36;
 }
 
-.features .feature-list li {
+.projects .feature-list li {
   margin-bottom: 10px;
   color: #074f66;
 }
 
-.features .feature-list li .svg-inline--fa {
+.projects .feature-list li .svg-inline--fa {
   margin-right: 5px;
   color: #fff;
 }
