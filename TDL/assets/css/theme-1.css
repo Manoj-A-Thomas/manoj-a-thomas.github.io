@@ -277,45 +277,45 @@ pre code {
   top: 2px;
 }
 
-/* ======= About Section ======= */
-.about {
+/* ======= People Section ======= */
+.people {
   padding: 80px 0;
   background: #f5f5f5;
 }
 
-.about .title {
+.people .title {
   color: #074f66;
   margin-top: 0;
   margin-bottom: 60px;
 }
 
-.about .intro {
+.people .intro {
   max-width: 800px;
   margin: 0 auto;
   margin-bottom: 60px;
 }
 
-.about .item {
+.people .item {
   position: relative;
   margin-bottom: 30px;
 }
 
-.about .item .icon-holder {
+.people .item .icon-holder {
   position: absolute;
   left: 30px;
   top: 0;
 }
 
-.about .item .icon-holder .svg-inline--fa {
+.people .item .icon-holder .svg-inline--fa {
   font-size: 24px;
   color: #074f66;
 }
 
-.about .item .content {
+.people .item .content {
   padding-left: 60px;
 }
 
-.about .item .content .sub-title {
+.people .item .content .sub-title {
   margin-top: 0;
   color: #074f66;
   font-size: 18px;
