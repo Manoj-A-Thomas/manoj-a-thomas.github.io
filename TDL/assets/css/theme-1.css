@@ -530,42 +530,42 @@ pre code {
   margin-bottom: 30px;
 }
 
-/* ======= Contact Section ======= */
-.contact {
+/* ======= lastbit Section ======= */
+.lastbit {
   padding: 80px 0;
   background: #17baef;
   color: #fff;
 }
 
-.contact .contact-inner {
+.lastbit .lastbit-inner {
   max-width: 760px;
   margin: 0 auto;
 }
 
-.contact .title {
+.lastbit .title {
   color: #074f66;
   margin-top: 0;
   margin-bottom: 30px;
 }
 
-.contact .intro {
+.lastbit .intro {
   margin-bottom: 60px;
 }
 
-.contact a {
+.lastbit a {
   color: #074f66;
 }
 
-.contact a:hover {
+.lastbit a:hover {
   color: #042a36;
 }
 
-.contact .author-message {
+.lastbit .author-message {
   position: relative;
   margin-bottom: 60px;
 }
 
-.contact .author-message .profile {
+.lastbit .author-message .profile {
   position: absolute;
   left: 30px;
   top: 15px;
@@ -573,7 +573,7 @@ pre code {
   height: 100px;
 }
 
-.contact .author-message .profile img {
+.lastbit .author-message .profile img {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -584,7 +584,7 @@ pre code {
   background-clip: padding-box;
 }
 
-.contact .author-message .speech-bubble {
+.lastbit .author-message .speech-bubble {
   margin-left: 155px;
   background: #10b2e7;
   color: #074f66;
@@ -600,18 +600,18 @@ pre code {
   position: relative;
 }
 
-.contact .author-message .speech-bubble .sub-title {
+.lastbit .author-message .speech-bubble .sub-title {
   color: #074f66;
   font-size: 16px;
   margin-top: 0;
   margin-bottom: 30px;
 }
 
-.contact .author-message .speech-bubble a {
+.lastbit .author-message .speech-bubble a {
   color: #fff;
 }
 
-.contact .author-message .speech-bubble:after {
+.lastbit .author-message .speech-bubble:after {
   position: absolute;
   left: -10px;
   top: 60px;
@@ -624,25 +624,25 @@ pre code {
   border-right: 10px solid #10b2e7;
 }
 
-.contact .author-message .speech-bubble .source {
+.lastbit .author-message .speech-bubble .source {
   margin-top: 30px;
 }
 
-.contact .author-message .speech-bubble .source a {
+.lastbit .author-message .speech-bubble .source a {
   color: #074f66;
 }
 
-.contact .author-message .speech-bubble .source .title {
+.lastbit .author-message .speech-bubble .source .title {
   color: #0c86ae;
 }
 
-.contact .info .sub-title {
+.lastbit .info .sub-title {
   color: #0e98c5;
   margin-bottom: 30px;
   margin-top: 0;
 }
 
-.contact .social-icons {
+.lastbit .social-icons {
   list-style: none;
   padding: 10px 0;
   margin-bottom: 0;
@@ -650,15 +650,15 @@ pre code {
   margin: 0 auto;
 }
 
-.contact .social-icons li {
+.lastbit .social-icons li {
   float: left;
 }
 
-.contact .social-icons li.last {
+.lastbit .social-icons li.last {
   margin-right: 0;
 }
 
-.contact .social-icons a {
+.lastbit .social-icons a {
   display: inline-block;
   background: #0c86ae;
   width: 48px;
@@ -677,11 +677,11 @@ pre code {
   float: left;
 }
 
-.contact .social-icons a:hover {
+.lastbit .social-icons a:hover {
   background: #e6ad14;
 }
 
-.contact .social-icons a .svg-inline--fa {
+.lastbit .social-icons a .svg-inline--fa {
   color: #fff;
   text-align: center;
   margin-top: 14px;
@@ -740,27 +740,27 @@ pre code {
     display: block;
     margin-bottom: 5px;
   }
-  .contact .author-message {
+  .lastbit .author-message {
     text-align: center;
   }
-  .contact .author-message .profile {
+  .lastbit .author-message .profile {
     position: static;
     margin: 0 auto;
     margin-bottom: 30px;
   }
-  .contact .author-message .speech-bubble {
+  .lastbit .author-message .speech-bubble {
     margin-left: 0;
   }
-  .contact .author-message .speech-bubble:after {
+  .lastbit .author-message .speech-bubble:after {
     display: none;
   }
-  .contact .social-icons a {
+  .lastbit .social-icons a {
     width: 36px;
     height: 36px;
     margin-right: 2px;
     font-size: 18px;
   }
-  .contact .social-icons a .svg-inline--fa {
+  .lastbit .social-icons a .svg-inline--fa {
     margin-top: 7px;
   }
 }
