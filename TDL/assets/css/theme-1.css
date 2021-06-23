@@ -530,42 +530,42 @@ pre code {
   margin-bottom: 30px;
 }
 
-/* ======= lastbit Section ======= */
-.lastbit {
+/* ======= Contact Section ======= */
+.contact {
   padding: 80px 0;
   background: #17baef;
   color: #fff;
 }
 
-.lastbit .contact-inner {
+.contact .contact-inner {
   max-width: 760px;
   margin: 0 auto;
 }
 
-.lastbit .title {
+.contact .title {
   color: #074f66;
   margin-top: 0;
   margin-bottom: 30px;
 }
 
-.lastbit .intro {
+.contact .intro {
   margin-bottom: 60px;
 }
 
-.lastbit a {
+.contact a {
   color: #074f66;
 }
 
-.lastbit a:hover {
+.contact a:hover {
   color: #042a36;
 }
 
-.lastbit .author-message {
+.contact .author-message {
   position: relative;
   margin-bottom: 60px;
 }
 
-.lastbit .author-message .profile {
+.contact .author-message .profile {
   position: absolute;
   left: 30px;
   top: 15px;
@@ -573,7 +573,7 @@ pre code {
   height: 100px;
 }
 
-.lastbit .author-message .profile img {
+.contact .author-message .profile img {
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
@@ -584,7 +584,7 @@ pre code {
   background-clip: padding-box;
 }
 
-.lastbit .author-message .speech-bubble {
+.contact .author-message .speech-bubble {
   margin-left: 155px;
   background: #10b2e7;
   color: #074f66;
@@ -600,18 +600,18 @@ pre code {
   position: relative;
 }
 
-.lastbit .author-message .speech-bubble .sub-title {
+.contact .author-message .speech-bubble .sub-title {
   color: #074f66;
   font-size: 16px;
   margin-top: 0;
   margin-bottom: 30px;
 }
 
-.lastbit .author-message .speech-bubble a {
+.contact .author-message .speech-bubble a {
   color: #fff;
 }
 
-.lastbit .author-message .speech-bubble:after {
+.contact .author-message .speech-bubble:after {
   position: absolute;
   left: -10px;
   top: 60px;
@@ -624,25 +624,25 @@ pre code {
   border-right: 10px solid #10b2e7;
 }
 
-.lastbit .author-message .speech-bubble .source {
+.contact .author-message .speech-bubble .source {
   margin-top: 30px;
 }
 
-.lastbit .author-message .speech-bubble .source a {
+.contact .author-message .speech-bubble .source a {
   color: #074f66;
 }
 
-.lastbit .author-message .speech-bubble .source .title {
+.contact .author-message .speech-bubble .source .title {
   color: #0c86ae;
 }
 
-.lastbit .info .sub-title {
+.contact .info .sub-title {
   color: #0e98c5;
   margin-bottom: 30px;
   margin-top: 0;
 }
 
-.lastbit .social-icons {
+.contact .social-icons {
   list-style: none;
   padding: 10px 0;
   margin-bottom: 0;
@@ -650,15 +650,15 @@ pre code {
   margin: 0 auto;
 }
 
-.lastbit .social-icons li {
+.contact .social-icons li {
   float: left;
 }
 
-.lastbit .social-icons li.last {
+.contact .social-icons li.last {
   margin-right: 0;
 }
 
-.lastbit .social-icons a {
+.contact .social-icons a {
   display: inline-block;
   background: #0c86ae;
   width: 48px;
@@ -677,11 +677,11 @@ pre code {
   float: left;
 }
 
-.lastbit .social-icons a:hover {
+.contact .social-icons a:hover {
   background: #e6ad14;
 }
 
-.lastbit .social-icons a .svg-inline--fa {
+.contact .social-icons a .svg-inline--fa {
   color: #fff;
   text-align: center;
   margin-top: 14px;
