@@ -537,7 +537,7 @@ pre code {
   color: #fff;
 }
 
-.lastbit .lastbit-inner {
+.lastbit .contact-inner {
   max-width: 760px;
   margin: 0 auto;
 }
@@ -740,27 +740,27 @@ pre code {
     display: block;
     margin-bottom: 5px;
   }
-  .lastbit .author-message {
+  .contact .author-message {
     text-align: center;
   }
-  .lastbit .author-message .profile {
+  .contact .author-message .profile {
     position: static;
     margin: 0 auto;
     margin-bottom: 30px;
   }
-  .lastbit .author-message .speech-bubble {
+  .contact .author-message .speech-bubble {
     margin-left: 0;
   }
-  .lastbit .author-message .speech-bubble:after {
+  .contact .author-message .speech-bubble:after {
     display: none;
   }
-  .lastbit .social-icons a {
+  .contact .social-icons a {
     width: 36px;
     height: 36px;
     margin-right: 2px;
     font-size: 18px;
   }
-  .lastbit .social-icons a .svg-inline--fa {
+  .contact .social-icons a .svg-inline--fa {
     margin-top: 7px;
   }
 }
