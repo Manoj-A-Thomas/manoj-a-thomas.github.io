@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Field Notes — Essays</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #FAFAF6;
+    --paper-raised: #F3F1EA;
+    --ink: #1C1B18;
+    --ink-soft: #57534A;
+    --ink-faint: #8B8578;
+    --rule: #DEDACC;
+    --accent: #2E4A5E;
+    --accent-soft: #5C7A8C;
+    --focus: #2E4A5E;
+    --serif-line: 1.75;
+  }
+  :root:not([data-theme="light"]) {
+    @media (prefers-color-scheme: dark) {
+      --paper: #16150F;
+      --paper-raised: #1D1C15;
+      --ink: #ECE7D9;
+      --ink-soft: #B3AC98;
+      --ink-faint: #786F5C;
+      --rule: #35331F;
+      --accent: #8FB4C9;
+      --accent-soft: #6C93A8;
+      --focus: #8FB4C9;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper: #16150F;
+    --paper-raised: #1D1C15;
+    --ink: #ECE7D9;
+    --ink-soft: #B3AC98;
+    --ink-faint: #786F5C;
+    --rule: #35331F;
+    --accent: #8FB4C9;
+    --accent-soft: #6C93A8;
+    --focus: #8FB4C9;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ background: var(--paper); }
+  body{
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    line-height: var(--serif-line);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  a{ color: inherit; }
+  a:focus-visible, button:focus-visible{
+    outline: 2px solid var(--focus);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .sans{ font-family: "Inter", -apple-system, system-ui, sans-serif; }
+
+  .shell{
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* ---------- Header ---------- */
+  header.site{
+    padding: 64px 0 40px;
+    border-bottom: 1px solid var(--rule);
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 24px;
+  }
+  header.site .wordmark{
+    font-size: 1.05rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    text-decoration: none;
+    cursor: pointer;
+    background: none;
+    border: none;
+    padding: 0;
+    color: var(--ink);
+    font-family: "Source Serif 4", serif;
+    font-style: italic;
+  }
+  header.site nav{
+    display: flex;
+    align-items: center;
+    gap: 22px;
+  }
+  header.site nav a, header.site nav button{
+    font-family: "Inter", sans-serif;
+    font-size: 0.82rem;
+    color: var(--ink-soft);
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    letter-spacing: 0.01em;
+  }
+  header.site nav a:hover, header.site nav button:hover{ color: var(--ink); }
+
+  #theme-toggle{
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--rule);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.85rem;
+  }
+
+  /* ---------- Home ---------- */
+  .intro{
+    padding: 48px 0 8px;
+    max-width: 58ch;
+  }
+  .intro p{
+    font-size: 1.15rem;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+
+  .essay-list{
+    margin: 40px 0 96px;
+  }
+  .essay-row{
+    display: block;
+    padding: 30px 0;
+    border-top: 1px solid var(--rule);
+    text-decoration: none;
+    color: var(--ink);
+  }
+  .essay-list .essay-row:last-child{
+    border-bottom: 1px solid var(--rule);
+  }
+  .essay-row .meta{
+    font-family: "Inter", sans-serif;
+    font-size: 0.76rem;
+    color: var(--ink-faint);
+    display: flex;
+    gap: 14px;
+    margin-bottom: 10px;
+  }
+  .essay-row h2{
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin: 0 0 8px;
+    line-height: 1.35;
+    transition: color 0.15s ease;
+  }
+  .essay-row:hover h2{ color: var(--accent); }
+  .essay-row .dek{
+    font-size: 1rem;
+    color: var(--ink-soft);
+    margin: 0;
+    max-width: 56ch;
+  }
+
+  footer.site{
+    padding: 30px 0 72px;
+    border-top: 1px solid var(--rule);
+    font-family: "Inter", sans-serif;
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+  }
+
+  /* ---------- Essay page ---------- */
+  .essay-header{
+    padding: 56px 0 0;
+  }
+  .back-link{
+    font-family: "Inter", sans-serif;
+    font-size: 0.8rem;
+    color: var(--ink-faint);
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+  .back-link:hover{ color: var(--accent); }
+
+  .essay-header .meta{
+    font-family: "Inter", sans-serif;
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+    display: flex;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+  .essay-header h1{
+    font-size: 2.15rem;
+    line-height: 1.25;
+    font-weight: 500;
+    margin: 0 0 20px;
+    max-width: 20ch;
+  }
+  .essay-header .dek{
+    font-size: 1.2rem;
+    color: var(--ink-soft);
+    max-width: 42ch;
+    margin: 0 0 48px;
+  }
+
+  .essay-body{
+    padding-bottom: 100px;
+    max-width: 64ch;
+  }
+  .essay-body p{
+    font-size: 1.1rem;
+    margin: 0 0 26px;
+  }
+  .essay-body p.drop::first-letter{
+    font-size: 3.4rem;
+    float: left;
+    line-height: 0.8;
+    padding: 6px 10px 0 0;
+    font-weight: 500;
+    color: var(--accent);
+  }
+  .placeholder-flag{
+    font-family: "Inter", sans-serif;
+    font-size: 0.72rem;
+    color: var(--accent-soft);
+    border: 1px solid var(--rule);
+    background: var(--paper-raised);
+    display: inline-block;
+    padding: 3px 9px;
+    border-radius: 3px;
+    margin-bottom: 34px;
+  }
+
+  [data-view]{ display: none; }
+  [data-view].active{ display: block; }
+
+  @media (max-width: 560px){
+    header.site{ padding: 44px 0 32px; flex-wrap: wrap; }
+    .essay-header h1{ font-size: 1.7rem; }
+    .intro{ padding-top: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="shell">
+  <header class="site">
+    <button class="wordmark" onclick="go('home')">Field Notes</button>
+    <nav>
+      <button id="theme-toggle" aria-label="Toggle dark mode" onclick="toggleTheme()">☾</button>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <main data-view="home" class="active">
+    <div class="intro">
+      <p>Essays on information systems, digital health, and the slow work of research — written here as they're finished, in no particular order.</p>
+    </div>
+
+    <div class="essay-list" id="essay-list"></div>
+
+    <footer class="site">
+      © <span id="year"></span> · Built as a quiet place to keep long-form thinking.
+    </footer>
+  </main>
+
+  <!-- ESSAY -->
+  <main data-view="essay">
+    <div class="essay-header">
+      <a class="back-link" href="#" onclick="go('home'); return false;">← All essays</a>
+      <div class="meta">
+        <span id="e-date"></span>
+        <span id="e-read"></span>
+      </div>
+      <h1 id="e-title"></h1>
+      <p class="dek" id="e-dek"></p>
+    </div>
+    <div class="essay-body" id="e-body"></div>
+  </main>
+</div>
+
+<script>
+  const essays = [
+    {
+      slug: "practice-of-research",
+      title: "On the Practice of Research",
+      dek: "Method is usually taught as a set of rules. In practice it is closer to a set of habits, most of them invisible until something goes wrong.",
+      date: "Draft",
+      read: "6 min",
+      body: [
+        "drop|This is placeholder text — replace it with your own essay. Most methods training treats research as a sequence of correct steps: define the question, choose the design, collect, analyze, write up. What it rarely teaches is the improvisation that happens between those steps, the small judgment calls that never make it into the methods section.",
+        "A finished paper is a reconstruction, not a record. It presents the version of events that survives contact with a reviewer, which is not the same as the version that happened. The gap between the two is where most of the actual thinking took place — the false starts, the instrument that had to be rebuilt halfway through fieldwork, the finding that didn't fit and was quietly set aside.",
+        "None of this is a complaint about the format. Papers have to be legible to people who weren't there. But it's worth keeping a separate, honest account somewhere — for your own sake, if nowhere else — of what the work actually looked like while it was happening."
+      ]
+    },
+    {
+      slug: "digital-health-low-resource",
+      title: "Digital Health Systems in Low-Resource Settings",
+      dek: "Software built for well-resourced health systems tends to assume things — reliable power, stable connectivity, a single source of truth — that do not hold everywhere it gets deployed.",
+      date: "Draft",
+      read: "8 min",
+      body: [
+        "drop|This is placeholder text — replace it with your own essay. A surprising amount of digital health failure is not a failure of the software itself but of the assumptions baked into it. Systems designed in one context and deployed in another inherit assumptions about infrastructure, staffing, and data governance that the new setting doesn't share.",
+        "The literature on scale-up and sustainability tends to focus on technical interoperability — can System A talk to System B — while treating the human side, who is responsible for the data once the pilot funding ends, as a secondary concern. In practice it's often the deciding one.",
+        "Knowledge mobilization, in this context, isn't just about publishing findings. It's about building the relationships and institutional memory that let a system outlive the project that built it."
+      ]
+    },
+    {
+      slug: "information-systems-reconsidered",
+      title: "Information Systems, Reconsidered",
+      dek: "The field sits at an awkward intersection — too technical for management schools, too social for computer science — and that discomfort is, arguably, the point.",
+      date: "Draft",
+      read: "5 min",
+      body: [
+        "drop|This is placeholder text — replace it with your own essay. Information systems research has never fully settled its own identity, and every few years someone writes another essay asking whether the field has lost its core. The honest answer is that it never had a stable core to lose — it was always a meeting point between technical and organizational questions.",
+        "That in-betweenness is usually treated as a weakness. It's also the reason IS research is often the first to notice when a technically elegant system fails for entirely organizational reasons, or when an organizational fix breaks because nobody consulted the data model.",
+        "Holding both halves of that sentence at once is harder than specializing in either one. It's also, most of the time, the more useful place to stand."
+      ]
+    },
+    {
+      slug: "knowledge-mobilization-gap",
+      title: "The Gap Between Study and Practice",
+      dek: "A ten-year evaluation and a six-month implementation rarely move at the same speed. Most of the friction in knowledge mobilization comes from that mismatch.",
+      date: "Draft",
+      read: "7 min",
+      body: [
+        "drop|This is placeholder text — replace it with your own essay. Evidence takes time to produce properly, and practice rarely has that much time to wait. By the time a rigorous study reaches publication, the policy window it was meant to inform has often already closed, or moved on to a different question entirely.",
+        "This isn't an argument for rushing the science. It's an argument for treating knowledge mobilization as its own discipline, with its own timeline, rather than as an afterthought tacked onto the end of a grant.",
+        "The most useful mobilization work often starts before the study does — building the relationships that will make the eventual findings legible to the people who need them, long before there's anything to report."
+      ]
+    },
+    {
+      slug: "notes-on-fieldwork",
+      title: "Notes on Fieldwork",
+      dek: "Short, occasional entries from ongoing projects — closer to a field journal than a finished argument.",
+      date: "Draft",
+      read: "4 min",
+      body: [
+        "drop|This is placeholder text — replace it with your own essay. Not every observation deserves a full paper, but it's worth writing some of them down anyway, before they get smoothed over into a clean narrative.",
+        "This is a good place for the smaller stuff: a pattern noticed across two site visits, a question a participant asked that reframed the whole project, a method that didn't work and why.",
+        "Treat it as a working notebook rather than a showcase. The value is in the accumulation, not any single entry."
+      ]
+    }
+  ];
+
+  const listEl = document.getElementById('essay-list');
+  essays.forEach(e => {
+    const a = document.createElement('a');
+    a.href = '#' + e.slug;
+    a.className = 'essay-row';
+    a.innerHTML = `
+      <div class="meta"><span>${e.date}</span><span>${e.read} read</span></div>
+      <h2>${e.title}</h2>
+      <p class="dek">${e.dek}</p>
+    `;
+    listEl.appendChild(a);
+  });
+
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  function renderEssay(slug){
+    const e = essays.find(x => x.slug === slug);
+    if(!e) return go('home');
+    document.getElementById('e-date').textContent = e.date;
+    document.getElementById('e-read').textContent = e.read + ' read';
+    document.getElementById('e-title').textContent = e.title;
+    document.getElementById('e-dek').textContent = e.dek;
+    const body = document.getElementById('e-body');
+    body.innerHTML = '<span class="placeholder-flag">Placeholder — replace with your essay text</span>';
+    e.body.forEach(p => {
+      const isDrop = p.startsWith('drop|');
+      const text = isDrop ? p.slice(5) : p;
+      const para = document.createElement('p');
+      if(isDrop) para.className = 'drop';
+      para.textContent = text;
+      body.appendChild(para);
+    });
+  }
+
+  function go(view){
+    if(view === 'home'){
+      window.location.hash = '';
+    }
+    render();
+    window.scrollTo(0,0);
+  }
+
+  function render(){
+    const hash = window.location.hash.replace('#','');
+    const isEssay = hash && essays.some(e => e.slug === hash);
+    document.querySelector('[data-view="home"]').classList.toggle('active', !isEssay);
+    document.querySelector('[data-view="essay"]').classList.toggle('active', isEssay);
+    if(isEssay) renderEssay(hash);
+  }
+
+  window.addEventListener('hashchange', render);
+  render();
+
+  // Theme toggle (persists per-viewer via localStorage; falls back gracefully)
+  function applyTheme(t){
+    if(t){ document.documentElement.setAttribute('data-theme', t); }
+    else { document.documentElement.removeAttribute('data-theme'); }
+    document.getElementById('theme-toggle').textContent = (t === 'dark') ? '☀' : '☾';
+  }
+  function toggleTheme(){
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    try{ localStorage.setItem('theme', next); }catch(err){}
+  }
+  (function initTheme(){
+    let saved = null;
+    try{ saved = localStorage.getItem('theme'); }catch(err){}
+    if(saved) applyTheme(saved);
+  })();
+</script>
+
+</body>
+</html>
