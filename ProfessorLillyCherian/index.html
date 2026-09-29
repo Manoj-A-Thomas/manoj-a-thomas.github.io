@@ -301,7 +301,7 @@
   <main data-view="home" class="active">
     <div class="intro">
       <span class="intro-photo-wrap">
-        <img class="intro-photo" src="./blob/flower.jpeg" alt="Roses in an amber glass vase on Professor Cherian's desk">
+        <img class="intro-photo" src="flower.jpeg" alt="Roses in an amber glass vase on Professor Cherian's desk">
       </span>
       <p>My Essays on Life, Literature, and Everything else.</p>
       <p class="byline">—Professor Lilly Cherian</p>
@@ -388,12 +388,34 @@
       category: "Post-Modern Literary Criticisms",
       title: "The Metaphoric and Metanymic Poles",
       dek: "Jakobson split language into two axes of association. Most literary movements can be read as a preference for one over the other.",
-      date: "Draft",
+      date: "2026",
       read: "7 min",
+      placeholder: false,
       body: [
-        "drop|This is placeholder text — replace it with your own essay. One axis works by similarity — this stands for that because the two resemble each other. The other works by contiguity — this stands for that because the two are already next to each other, part of the same scene or sequence.",
-        "Poetry has traditionally leaned toward the first, prose toward the second, but the interesting cases are the ones that refuse to sit still on either axis — a narrative built from associative leaps, or a lyric that proceeds by adjacency rather than resemblance.",
-        "Reading a text for which pole it favors says less about its genre than about the kind of attention it's asking the reader to pay — likeness spotted across distance, or connection traced along a surface."
+        "drop|Roman Jakobson belongs to the group of Russian Formalists and was the founder of the Moscow Linguistic Circle. It played an important role in the development of Russian Formalism. In 1920, he came Czechoslovakia and found the Prague Linguistic Circle. In 1929, he published, 'The Phonological Evolution of Russian' compared with other languages. The Nazi invasion of Czechoslovakia forced him to move to the USA.",
+        "Formalism was a term used by critics to mock the tendency of its practitioners to give more importance to form than content. They moved from the gathering of linguistic data to the study of methods in the analysis of poetic and practical speech. They studied how modern linguistics should be applied to the analysis of literature, so that literary texts could be subjected to a more scientific approach. The work influenced structuralism, semiotics and the writings of Bakhtin. Russian formalists under the influence of Saussure, felt that literary language, was a specialized kind of language and had a special function. It could also vitalize ordinary language which had become stale and insipid because of constant use. They formally studied literary texts as structures and examined the sign itself. To them literary language is different from everyday language which is used to communicate information. They wanted to find the features, which gave a piece of writing, the quality of literature through techniques like defamiliarisation. Using language in new ways could help readers experience words in a new way. Literature was regarded as a message, without a code but they saw it as a code without a message. They are more interested in individual works than with the ideas behind them. Fictional works change to produce generic patterns and it is within these patterns that individual works take their shape.",
+        "Contributions of Russian formalism",
+        "1. They have helped to develop a systematic and scientific attitude to literature, a reassessment of the literary works.",
+        "2. They have also made us aware of the dichotomy or division into two parts of form and content and have drawn the attention of the later critics to the sound pattern.",
+        "3. They have helped to shift the attention from the reader to the text and the reading process.",
+        "4. They have also given modern criticism certain terms: they are Defamiliarisation, Automatisation, Literariness etc.",
+        "Certain terms coined by Russian Formalists",
+        "Literariness: Literariness is the quality which makes a given work literature. Formalists see life and art as opposites and separate literary from non-literary. According to their literature is differential and oppositional. Literature is made by what makes it different from other types of writing or other orders of facts. The hall mark of literature is literariness.",
+        "Defamiliarisation: The term means making what is familiar, unfamiliar. The term has been coined by Shklovsky. Defamiliarisation is the technique through which new life is put into, what has become hackneyed or insipid. When a familiar object is defamilairised or made unfamiliar through new ways, it acquires 'literariness'.",
+        "Automatisation: Very often an artistic object becomes automatised through too much uses and it loses all significance. A word like 'love' is a typical example of automatisation. Automatisation makes a word hackneyed and insipid.",
+        "Introduction to the essay",
+        "Jakobson was a trail blazer in the study of how language is acquired and how the language functions could break down in the case of a disease like aphasia (inability to express thoughts in words and the loss of faculty of selection and substitution (the metaphoric pole) or the faculty of combination and contextualization (the metonymic pole)). All linguistic operations are the result of selection and combination. The words are selected and combined according to the grammar and cultural values of the culture in use. Metaphor is associated with selection and metonymy with the process of combination.",
+        "Metonymy — combination, association, contiguity. Metaphor — selection, similarity.",
+        "Examples of metaphor",
+        "1. Don't try to study everything in one day. Don't chew more than you can swallow at one time.",
+        "2. I was able to do it easily. I sailed through it easily.",
+        "study, do/chew, sail - metaphor.",
+        "The similarity lies in the context.",
+        "Examples of metonymy.",
+        "Metonymy involves combination and association. (contiguity).",
+        "Example: The pen is mightier than the sword. The nouns represent activities with which they are associated. Bloodshed for war. The word 'flame' can be used metaphorically as well as metonymically.",
+        "Flame – light, fire, blaze (metaphor)",
+        "Flame – passion, anger etc (metonymy)"
       ]
     }
   ];
@@ -432,7 +454,9 @@
     document.getElementById('e-title').textContent = e.title;
     document.getElementById('e-dek').textContent = e.dek;
     const body = document.getElementById('e-body');
-    body.innerHTML = '<span class="placeholder-flag">Placeholder — replace with your essay text</span>';
+    body.innerHTML = e.placeholder === false
+      ? ''
+      : '<span class="placeholder-flag">Placeholder — replace with your essay text</span>';
     e.body.forEach(p => {
       const isDrop = p.startsWith('drop|');
       const text = isDrop ? p.slice(5) : p;
