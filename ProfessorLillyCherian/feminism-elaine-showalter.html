@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feminism by Elaine Showalter — Prof Lilly Cherian</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #FAFAF6;
+    --paper-raised: #F3F1EA;
+    --ink: #1C1B18;
+    --ink-soft: #57534A;
+    --ink-faint: #8B8578;
+    --rule: #DEDACC;
+    --accent: #2E4A5E;
+    --accent-soft: #5C7A8C;
+    --focus: #2E4A5E;
+    --serif-line: 1.75;
+  }
+  :root:not([data-theme="light"]) {
+    @media (prefers-color-scheme: dark) {
+      --paper: #16150F;
+      --paper-raised: #1D1C15;
+      --ink: #ECE7D9;
+      --ink-soft: #B3AC98;
+      --ink-faint: #786F5C;
+      --rule: #35331F;
+      --accent: #8FB4C9;
+      --accent-soft: #6C93A8;
+      --focus: #8FB4C9;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper: #16150F;
+    --paper-raised: #1D1C15;
+    --ink: #ECE7D9;
+    --ink-soft: #B3AC98;
+    --ink-faint: #786F5C;
+    --rule: #35331F;
+    --accent: #8FB4C9;
+    --accent-soft: #6C93A8;
+    --focus: #8FB4C9;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ background: var(--paper); }
+  body{
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    line-height: var(--serif-line);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  a{ color: inherit; }
+  a:focus-visible, button:focus-visible{
+    outline: 2px solid var(--focus);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .shell{
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  header.site{
+    padding: 64px 0 40px;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+    gap: 24px;
+  }
+  #theme-toggle{
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--rule);
+    background: none;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.85rem;
+    color: var(--ink);
+  }
+
+  .essay-header{
+    padding: 0;
+  }
+  .back-link{
+    font-family: "Inter", sans-serif;
+    font-size: 0.8rem;
+    color: var(--ink-faint);
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+  .back-link:hover{ color: var(--accent); }
+
+  .essay-header .meta{
+    font-family: "Inter", sans-serif;
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+    display: flex;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+  .essay-header h1{
+    font-size: 2.15rem;
+    line-height: 1.25;
+    font-weight: 500;
+    margin: 0 0 20px;
+    max-width: 20ch;
+  }
+  .essay-header .dek{
+    font-size: 1.2rem;
+    color: var(--ink-soft);
+    max-width: 42ch;
+    margin: 0 0 48px;
+  }
+
+  .essay-body{
+    padding-bottom: 100px;
+    max-width: 64ch;
+  }
+  .essay-body p{
+    font-size: 1.1rem;
+    margin: 0 0 26px;
+  }
+  .essay-body p.drop::first-letter{
+    font-size: 3.4rem;
+    float: left;
+    line-height: 0.8;
+    padding: 6px 10px 0 0;
+    font-weight: 500;
+    color: var(--accent);
+  }
+
+  @media (max-width: 560px){
+    header.site{ padding: 44px 0 32px; flex-wrap: wrap; }
+    .essay-header h1{ font-size: 1.7rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="shell">
+  <header class="site">
+    <button id="theme-toggle" aria-label="Toggle dark mode" onclick="toggleTheme()">☾</button>
+  </header>
+
+  <main>
+    <div class="essay-header">
+      <a class="back-link" href="index.html">← All Essays</a>
+      <div class="meta">
+        <span>2026</span>
+        <span>6 min read</span>
+      </div>
+      <h1>Feminism by Elaine Showalter</h1>
+      <p class="dek">From the first and second wave to the question of how women learn to reread what men have written about them.</p>
+    </div>
+    <div class="essay-body">
+      <p class="drop">Feminism which originated in the desire to right the balance of power between the sexes has emerged as an important multi-dimensional discipline in the 20th century. The feminist movement is usually divided into the First and Second wave, the former extending from the emergence of the women&#x27;s Suffrage Movement in the 19th century to the 1950s and the latter from the 1950s to the present day. The first wave feminism created a new political identity for women and won them legal advances and public emancipation. The second wave of feminism sought to give voice to a new and autonomous woman citizen and to focus on the specifications of women&#x27;s differences from each other as well as men. It turned to social and psychoanalytic theories about gender difference in order to create a fresh feminist ethics. The common goal of all feminist theories and politics is to bring about a full understanding of the effects of living in the category &quot;woman&quot;.</p>
+      <p>&quot;Feminism&quot; is thus a political ideology based on the fact that gender difference is the foundation of a structural inequality between men and women by which women suffer systematic social injustice and that, this inequality is not the result of biological necessity ,but is produced by the cultural construction of gender difference . The long tradition of biological determinism which has been used throughout history and across societies to justify woman&#x27;s subordination is thus challenged. Feminists used the terms &quot;female&quot; and &quot;male&quot; to designate biological sex and feminine and masculine to refer to acquired cultural gender identity. A social power structure, which upholds a pervasive and systematic form of gender based inequality, is called a &quot;patriarchy&quot;. A great deal of feminist theory is concerned with the ways in which patriarchal authority naturalised woman&#x27;s subordination ,making it seem to be just the way things are ;but feminism itself is not a unified coherent ideology.</p>
+      <p>It&#x27;s interesting to examine the relationship between literature and these social, political, and ethical debates on the status of women.</p>
+      <p>Literature is a body of texts, which have certain aesthetic qualities and which offer special insight into human experience and sharpen our understanding of human reality. Feminists are interested in literature because they want to find how literature may be involved in producing the meanings, values and attitudes that lock women in inequality. The three central themes of feminist literary criticism are the question of a woman&#x27;s identity, the formation of literary canons and the politics of aesthetic evaluation. Feminist criticism includes within itself many social, political psychological, literary and linguistic theories.</p>
+      <p>Post sixties feminism grew from the recognition that women must represent themselves and effectively contest misapprehension, and negative images of themselves. The earliest attempt in this direction was made by Simone de Beauvoir in the Second Sex (1949) .The text illustrates how the term &quot;man&quot; and &quot;woman&quot; are not used symmetrically. The term &quot;man&quot; is always positive while &quot;woman&quot; is the secondary term, what is &quot;other&quot; to the other norm .Thus &quot; woman&quot; functions as the &quot;other&quot; which allows men to construct a positive masculine ,self -identity for themselves by defining woman in negative terms. Thus woman is frail (not strong), emotional (not rational), yielding (not virile, so that masculinity can be defined as these positive qualities. Beauvoir argues that woman as represented by man has a double and deceptive image. He projects upon her what he desires and what he fears, what he loves and what he hates. Since men are culturally dominant this persistent mythicizing of &quot;woman&quot; becomes accepted as the universal view. Even women have come to read &#x27;woman&#x27; as men read them. Hence women have to start rereading men&#x27;s readings of woman and so learn how to begin reading as a woman.</p>
+      <p>Two books which brought the project of rereading male texts back to the attention of woman as readers and critics were Mary Ellmann&#x27;s &quot; Thinking About Women &quot;(1968) and Kate Millett&#x27;s &quot;Sexual Politics&quot;(1969) . There writers discuss a wide range of literary and critical writing to demonstrate a pervasive sexism operating within literature.</p>
+      <p>Many feminist critics of this period focused on the study of female stereotypes in literature. Rereading the traditional canons of great literary texts challenging their claims to disinterestedness became a major project of feminist literary criticism. Male criticism operates a double standard. It permits the indulgences of male fantasies of freedom and irresponsibility while firmly outlawing the real threat to a patriarchal society posed by women&#x27;s refusal of male assigned conventional roles.</p>
+      <p>The emergence of a large number of successful professional women writers in the late nineteen century provoked a crisis of anxiety among literary men and male critics try to marginalise woman&#x27;s writing. They belittled the themes of women&#x27;s writing as insignificant and unimportant. This male control of the canons in every field of literary activity criticism, reviewing, publishing and teaching has been challenged in two major ways by feminist critics by re-reading male authored canonical texts (the acts of looking back and seeing with fresh eyes) and by establishing a women&#x27;s tradition of writing or a subculture which can be set beside the male dominated canon of &quot; master works&quot;. The role played by many women writers is highlighted. Ellen Moers&#x27; Literary Women 1976, Elaine Showalter&#x27;s , A literature of their own(1977) and Sandra Gilbert and Susan Gubar&#x27;s The mad woman in the attic (1979) represent Anglo American feminist criticism.</p>
+    </div>
+  </main>
+</div>
+
+<script>
+  function applyTheme(t){
+    if(t){ document.documentElement.setAttribute('data-theme', t); }
+    else { document.documentElement.removeAttribute('data-theme'); }
+    document.getElementById('theme-toggle').textContent = (t === 'dark') ? '☀' : '☾';
+  }
+  function toggleTheme(){
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    try{ localStorage.setItem('theme', next); }catch(err){}
+  }
+  (function initTheme(){
+    let saved = null;
+    try{ saved = localStorage.getItem('theme'); }catch(err){}
+    if(saved) applyTheme(saved);
+  })();
+</script>
+
+</body>
+</html>
