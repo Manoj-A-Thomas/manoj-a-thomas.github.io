@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Who Am I? — Prof Lilly Cherian</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #FAFAF6;
+    --paper-raised: #F3F1EA;
+    --ink: #1C1B18;
+    --ink-soft: #57534A;
+    --ink-faint: #8B8578;
+    --rule: #DEDACC;
+    --accent: #2E4A5E;
+    --accent-soft: #5C7A8C;
+    --focus: #2E4A5E;
+    --serif-line: 1.75;
+  }
+  :root:not([data-theme="light"]) {
+    @media (prefers-color-scheme: dark) {
+      --paper: #16150F;
+      --paper-raised: #1D1C15;
+      --ink: #ECE7D9;
+      --ink-soft: #B3AC98;
+      --ink-faint: #786F5C;
+      --rule: #35331F;
+      --accent: #8FB4C9;
+      --accent-soft: #6C93A8;
+      --focus: #8FB4C9;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper: #16150F;
+    --paper-raised: #1D1C15;
+    --ink: #ECE7D9;
+    --ink-soft: #B3AC98;
+    --ink-faint: #786F5C;
+    --rule: #35331F;
+    --accent: #8FB4C9;
+    --accent-soft: #6C93A8;
+    --focus: #8FB4C9;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ background: var(--paper); }
+  body{
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    line-height: var(--serif-line);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  a{ color: inherit; }
+  a:focus-visible, button:focus-visible{
+    outline: 2px solid var(--focus);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .shell{
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  header.site{
+    padding: 64px 0 40px;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+    gap: 24px;
+  }
+  #theme-toggle{
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--rule);
+    background: none;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.85rem;
+    color: var(--ink);
+  }
+
+  .essay-header{
+    padding: 0;
+  }
+  .back-link{
+    font-family: "Inter", sans-serif;
+    font-size: 0.8rem;
+    color: var(--ink-faint);
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+  .back-link:hover{ color: var(--accent); }
+
+  .essay-header .meta{
+    font-family: "Inter", sans-serif;
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+    display: flex;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+  .essay-header h1{
+    font-size: 2.15rem;
+    line-height: 1.25;
+    font-weight: 500;
+    margin: 0 0 20px;
+    max-width: 20ch;
+  }
+  .essay-header .dek{
+    font-size: 1.2rem;
+    color: var(--ink-soft);
+    max-width: 42ch;
+    margin: 0 0 48px;
+  }
+
+  .essay-body{
+    padding-bottom: 100px;
+    max-width: 64ch;
+  }
+  .essay-body p{
+    font-size: 1.1rem;
+    margin: 0 0 26px;
+  }
+  .essay-body p.drop::first-letter{
+    font-size: 3.4rem;
+    float: left;
+    line-height: 0.8;
+    padding: 6px 10px 0 0;
+    font-weight: 500;
+    color: var(--accent);
+  }
+
+  @media (max-width: 560px){
+    header.site{ padding: 44px 0 32px; flex-wrap: wrap; }
+    .essay-header h1{ font-size: 1.7rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="shell">
+  <header class="site">
+    <button id="theme-toggle" aria-label="Toggle dark mode" onclick="toggleTheme()">☾</button>
+  </header>
+
+  <main>
+    <div class="essay-header">
+      <a class="back-link" href="index.html">← All Essays</a>
+      <div class="meta">
+        <span>2026</span>
+        <span>10 min read</span>
+      </div>
+      <h1>Who Am I?</h1>
+      <p class="dek">Oscar Wilde said most people are other people. An essay on genes, imitation, the trailblazers who refuse to tow the line, and what AI is doing to the rest of us.</p>
+    </div>
+    <div class="essay-body">
+      <p class="drop">This question I had asked myself, was not the result of any transcendent urging. It was a comment of Oscar Wilde I had come across years ago that prompted it. In his characteristic style Oscar Wilde had said “most people are other people, their passions a quotation, their lives a mimicry.” This enigmatic comment made me ask myself how much of me is actually mine, how much has been acquired from elsewhere.</p>
+      <p>Scientists tell us that we are mainly the product of our genes. It is the genes that make us who we are and what we are. This is certainly true to a large extent. In my family, my daughter, my grandchildren, and two of my great grandchildren are left-handed. This was a gift handed down to them from my mother - their great great grandmother. She herself must have received it from some distant ancestor! We owe most of our traits to some ancestor or other.</p>
+      <p>Certain diseases persist in families and trouble generation after generation, we certainly have to thank our past generations for this ubiquitous gift. It is true that we owe so much to our heredity, but our genes alone do not shape our identity. There are so many other factors that contribute to what we call “ourselves”, the most important among them are the influences we are exposed to right from our childhood. From the time of birth, a child is exposed to influences that shape its character and personality. Children, like blotting papers, absorb everything around them. The parents, of course, are the greatest influencers. In early childhood, their words, their manners, their attitudes are the forces that shape their early days. Jonathan Swift once remarked that if a child is placed under someone&#x27;s influence for the first five years of life, no one will be able to change them afterward. Yes, the early years are the formative years of one life. Initially, it is the parents who influence children the most. They absorb so much from them. They are the role models, but as the world gradually opens up, the child is flooded by influences from all around. The school and college years are the major moulding factors in early life. The teachers often play a big role in the making of the students. Most students admire their teachers and this admiration often leads to imitation. The friends around them, the book they reads, the people they interact with - all have a role in the formation of their “self”. We end up as the patchwork of everything we have seen, heard, read.</p>
+      <p>Imitation is regarded as the best form of admiration. We tend to imitate what we admire. It is a good trait, but very few people realise that it has to be exercised with discretion. Indiscriminate imitation can have disastrous results. This is true, especially in the case of fashion. All of us have a penchant for admiring what is elegant or beautiful, and this often make us imitate people who are elegant and beautiful. In the heyday of her life as the First Lady of the United States, Jacqueline Kennedy was the cynosure of the whole world. Everywhere she went, she drew large crowds. Her looks, her dresses, her hairstyle - everything won accolades. This admiration naturally resulted in endless imitations. I remember reading an article in the Reader’s Digest about her popularity and the blind admiration she drew. There was a cartoon of ladies who imitated her style, but unfortunately, what suited the tall beautiful Jacqueline looked ridiculous on these women who copied her - copied her sleek hairstyle, her severely cut straight dresses, and there were fat Jacquelines, dumpy Jacquelines, lean ones, and tall ones. Obviously, what was sauce for the goose certainly was not sauce for the gander. The desire to imitate should be exercised with caution. Otherwise, we will end up as laughing stocks!!</p>
+      <p>I often wonder why people imitate and copy others so easily, why most of us simply echo views and opinions borrowed from elsewhere. Mental laziness must be the main reason for this tendency. We find students turning to learning aides and such devices to find answers for mathematical problems or difficult questions. They take the easy way out, instead of trying to find answers through their own efforts. In these days of Google and Information Technology, most students lift everything from these sources and present it as their work. Originality and effort fly out of their mental windows, copying and secondhand information take their place. Nowadays, this is the norm rather than the exception. The same mental laziness and aversion for intellectual exercise often lead us to accept other people’s views and opinions as gospel truth, and we parade these borrowed views proudly as our own. Everything that is popular, everything that is in vogue, will be accepted and copied by the majority of people; they are the purveyors of secondhand views, opinions, and emotions. From time to time, cults or political theories or particular intellectual views become popular, and people blindly accept them and follow them. In the 60s, when the hippie cult made its appearance, everyone tried to be a hippie. All the eccentric views, attitudes, beliefs, and behavioral patterns that we see around are blindly followed by most people. No wonder, Oscar Wilde felt that most people are indeed other people, just carbon copies in mind and manner.</p>
+      <p>But, I do not want to believe that this is the whole truth. Oscar Wilde had qualified his observation through the word “most”. He did not say “all”, he left out a small minority from the classification. If all of us were copycats living on secondhand opinions and secondhand views, the world would have come to a standstill long back; thankfully, there are people who refuse to tow the popular line and the universally accepted views blindly. Every age, every country has produced people who are trailblazers, who look around, examine and question the popular views, opinions, and beliefs, and chart out a new path for themselves. They discover new ethics, new philosophies, and new ideas, which help mankind to move forward. Socrates, Plato Aristotle, Cicero, Seneca, Voltaire, Rousseau, Foucault, Derrida - these are some of the great trailblazers who stand apart from the herd and enriched us through their original thoughts and ideas. Through the vedas, the Upanishads, the Bhagawat Gita, Indian philosophers, and the Rishis have given so much insight into the human life and have delved deep into the meaning and purpose of life. We owe so much to these great souls who have chosen a different path.</p>
+      <p>Very often, when a new concept or idea is broached by somebody who thinks differently, the whole world turns against them. Everyone wants to go along the beaten path. They are afraid of change. The person who comes up with a new concept or new philosophy is made to pay a heavy price. Jesus Christ, one of the greatest revolutionary thinkers the world has seen, ended up on the cross; Socrates had to take poison; Mahatma Gandhi, the apostle of non-violence was shot dead.</p>
+      <p>Very often, after they are gone, their ideas are accepted, but they are completely distorted in the hands of their followers. Christ championed the cause of the poor, the suffering and the oppressed; but his followers have made him the head of a church that gives more care for its material possessions than for his teachings, though they pay lip service to it. How much of Gandhi’s teachings are followed by the people who think of him as the Father of the Nation?</p>
+      <p>What was original, what was path breaking and revolutionary are distorted and debased by the people who call themselves the followers of these trailblazers! I wonder, whether Karl Marx will recognize the Communism that is practiced as the manifestation of his ideas in ‘Das Kapital’. Jesus Christ will hardly recognize the Christianity that is practiced in his name. The only bright spot in this dark scenario is that in spite of the distortions, in spite of the ugly makeovers, new ideas come all the time, breathing fresh air into the stale worn out mind of humanity.</p>
+      <p>In the last few centuries, there has been tremendous progress in the field of science. We have harnessed science to change the world around us. This change is a manifested, both materially as well as intellectually. What was done laboriously and manually, is now done quickly and easily by machines. This is seen in every aspect of life around us. Now-a-days, physical labor is reduced to the minimum, cutting and hoeing, digging and delving are things of the past. Inside the home, gadgets do everything for us; a homemaker’s labour is reduced to the minimum. This is true not only in the case of physical labour, but also mental labour. In the past, there were so many things a student had to memorise at school, like the multiplication table. Memorising was a major aspect of learning, but all that has changed in the 20th and 21st centuries; first came Information Technology and computers, which revolutionized our lives. Pen and paper almost disappeared - laptops and computers forced them out. There was no need to memorize the multiplication table anymore; calculators where there to save us. Smart phones are there to guide us at every step. When in doubt, ask the Google has become almost the norm. And now, the latest incarnation, the all powerful AI or artificial intelligence has taken over our lives. With the coming of AI, it seems we can put our minds to sleep and forget about thinking out things or solving problems. When in a dilemma, consult some appropriate AI device - do not torture your mind with “ifs” and “whys” - that is the latest trend. At present, with Generative AI, we can get guidance about so many things. It helps us to find answers, generate pictures, and can perform so many things for us.</p>
+      <p>Of course, Generative AI plays a big role in our lives now, but Generative AI has been pushed to the back background by the latest entrée, which is Agentic AI. It can perform endless wonders. If a chatbot is developed in the field of customer service, the customer will get proper information about the product, as well as help in completing the deal. Another service of Agentic AI is in analyzing the information in hundreds of books and research papers and providing new formulae, especially in the field of chemicals and pharmaceutics. It can even help in the field of medical diagnosis by analysing various test details. The greatest role of Agentic AI is that it can take over the decision-making capacity and guide our activities and decisions. It can be a blessing, especially for people who find it difficult to make up their minds and who suffer from the “to be or not to be” syndrome; but it is not an unmixed blessing - it has its flipside also. If Agentic AI ends up completely dominating our lives, it will lead to the gradual decline of our cognitive powers. When somebody can solve all our problems and needs, why trouble our brains about them? One can only think of Aldous Huxley’s Brave New World or George Orwell’s 1984. Dr. Faustus gave up his soul to Mephistopheles for 50 years of power and glory. We are the modern Dr. Faustuses, who have pledged our hearts and souls to science and its various products. Nowadays, it is AI that dominates and controls our lives. It is the latter day Mephistopheles of the human race, if it gets total sway over us. But, even the darkest cloud darkest cloud has a silver lining; our hope lies in the minority who stand apart from the crowd, who refused to tow the accepted ways and conventions, and follow their own bent. They will never be happy with secondhand views and opinions. As long as they are there, there is hope for humanity because they are not other people, their thoughts will never be quotations, their lives will never be mimicries. Like Abuo Ben Adhem’s - may their tribe increase and flourish.</p>
+    </div>
+  </main>
+</div>
+
+<script>
+  function applyTheme(t){
+    if(t){ document.documentElement.setAttribute('data-theme', t); }
+    else { document.documentElement.removeAttribute('data-theme'); }
+    document.getElementById('theme-toggle').textContent = (t === 'dark') ? '☀' : '☾';
+  }
+  function toggleTheme(){
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    try{ localStorage.setItem('theme', next); }catch(err){}
+  }
+  (function initTheme(){
+    let saved = null;
+    try{ saved = localStorage.getItem('theme'); }catch(err){}
+    if(saved) applyTheme(saved);
+  })();
+</script>
+
+</body>
+</html>
