@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Use and Throw — Prof Lilly Cherian</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper: #FAFAF6;
+    --paper-raised: #F3F1EA;
+    --ink: #1C1B18;
+    --ink-soft: #57534A;
+    --ink-faint: #8B8578;
+    --rule: #DEDACC;
+    --accent: #2E4A5E;
+    --accent-soft: #5C7A8C;
+    --focus: #2E4A5E;
+    --serif-line: 1.75;
+  }
+  :root:not([data-theme="light"]) {
+    @media (prefers-color-scheme: dark) {
+      --paper: #16150F;
+      --paper-raised: #1D1C15;
+      --ink: #ECE7D9;
+      --ink-soft: #B3AC98;
+      --ink-faint: #786F5C;
+      --rule: #35331F;
+      --accent: #8FB4C9;
+      --accent-soft: #6C93A8;
+      --focus: #8FB4C9;
+    }
+  }
+  :root[data-theme="dark"]{
+    --paper: #16150F;
+    --paper-raised: #1D1C15;
+    --ink: #ECE7D9;
+    --ink-soft: #B3AC98;
+    --ink-faint: #786F5C;
+    --rule: #35331F;
+    --accent: #8FB4C9;
+    --accent-soft: #6C93A8;
+    --focus: #8FB4C9;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ background: var(--paper); }
+  body{
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    line-height: var(--serif-line);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+  a{ color: inherit; }
+  a:focus-visible, button:focus-visible{
+    outline: 2px solid var(--focus);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .shell{
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  header.site{
+    padding: 64px 0 40px;
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+    gap: 24px;
+  }
+  #theme-toggle{
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    border: 1px solid var(--rule);
+    background: none;
+    cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.85rem;
+    color: var(--ink);
+  }
+
+  .essay-header{
+    padding: 0;
+  }
+  .back-link{
+    font-family: "Inter", sans-serif;
+    font-size: 0.8rem;
+    color: var(--ink-faint);
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 30px;
+  }
+  .back-link:hover{ color: var(--accent); }
+
+  .essay-header .meta{
+    font-family: "Inter", sans-serif;
+    font-size: 0.78rem;
+    color: var(--ink-faint);
+    display: flex;
+    gap: 14px;
+    margin-bottom: 18px;
+  }
+  .essay-header h1{
+    font-size: 2.15rem;
+    line-height: 1.25;
+    font-weight: 500;
+    margin: 0 0 20px;
+    max-width: 20ch;
+  }
+  .essay-header .dek{
+    font-size: 1.2rem;
+    color: var(--ink-soft);
+    max-width: 42ch;
+    margin: 0 0 48px;
+  }
+
+  .essay-body{
+    padding-bottom: 100px;
+    max-width: 64ch;
+  }
+  .essay-body p{
+    font-size: 1.1rem;
+    margin: 0 0 26px;
+  }
+  .essay-body p.drop::first-letter{
+    font-size: 3.4rem;
+    float: left;
+    line-height: 0.8;
+    padding: 6px 10px 0 0;
+    font-weight: 500;
+    color: var(--accent);
+  }
+
+  @media (max-width: 560px){
+    header.site{ padding: 44px 0 32px; flex-wrap: wrap; }
+    .essay-header h1{ font-size: 1.7rem; }
+  }
+</style>
+</head>
+<body>
+
+<div class="shell">
+  <header class="site">
+    <button id="theme-toggle" aria-label="Toggle dark mode" onclick="toggleTheme()">☾</button>
+  </header>
+
+  <main>
+    <div class="essay-header">
+      <a class="back-link" href="index.html">← All Essays</a>
+      <div class="meta">
+        <span>2026</span>
+        <span>6 min read</span>
+      </div>
+      <h1>Use and Throw</h1>
+      <p class="dek">A mother who kept every string and ribbon, set against a world where a three-year-old car already looks out of date.</p>
+    </div>
+    <div class="essay-body">
+      <p class="drop">This seems to be the guiding philosophy of life at present. &quot;Keep a thing for seven years, then you will find a use for it.&quot;- my mother used to din these words into my ears. She would never throw off anything, not even the jute strings with which the packets were tied. She would untie the parcel carefully, and wind the string and keep it safely in the bag allotted for used strings, ribbons went into a different bag, twines, left over bits of coloured clothes, all had their separate places in her chest of drawers. The coloured clothes went into the making of patch work, quilts, table clothes or cushion covers. She never had to search for an elastic band or pin or any of the things, people like me search for, at the last moment. But then it was before the era of globalisation or liberalization. Money was not that plentiful, foreign goods were rare commodities, some relative from beyond the seas would bring exotic brands of powder or cream or perfume which were treasured like precious antiques. If you wanted foreign made goods you had to pay through the nose and that through, circuitous routes. Ordinary people seldom ventured into such dangerous terrain. They had to make do with desi brands of foreign brands made in India. Ponds, Cuticura, Lakme – these were the familiar cosmetic names.</p>
+      <p>Those were also days when everybody knew the meaning of thrift. You had to make do with your old fridge or old car till it finally conked out. A second-hand car was the dream of every person who had a moderate income. In those days, a young man with a reasonable income dreamt of a second-hand car and the familiar models were Fiat, Standard Ten or an Ambassador. For them, the first mode of transport was often a cycle, then they would get promoted to a bike or a scooter, a car was the final point of arrival. How things have changed! Every Tom, Dick and Harry has a bike. No electrician, or carpenter or plumber worth his salt goes round in a cycle anymore. Their mode of transport is a bike and many of them have a car at home which they take out on special occasions. Now the roads are choke - a - block with luxurious, exotic models which are the owners&#x27; pride and neighbours&#x27; envy. Unless you have a BMW or Audi or a Mercedes, you have not arrived yet. When you have one of these luxury models, the next target is to own one of the super luxury ones. The BMW owner dreams of a Bentley or a Lamborghini - the costlier, the better.</p>
+      <p>My thoughts go back to the fifties and sixties when car mechanics would repair any old model and they were masters of improvisation. If the piston or the clutch or any other vital part conked out, they always managed to get the old car back on the road and like a man with a repaired heart, these old cars also somehow managed to huff and puff their way along the not so crowded roads, much to the relief and satisfaction of their owners, whose desire for an up to date model would often only remain a dream.</p>
+      <p>How times search changed! Now, who would think of owning a car which is more than three years old and car companies keep changing the models every three years. One definitely does not want one&#x27;s car to look out dated and why should one, when banks and finance companies are only too willing to help you with lavish loans? Make hay while the sun shines, buy now and pay later - that sums up the present day attitude. Accumulated interest and capital do not worry us. &quot;Unborn tomorrow, dead yesterday, why fret about them, if today be sweet.&quot; Yes, we are the new generation, we live in the present, we have no love for the old or the passe&#x27; or damaged. Look at today&#x27;s cars - if there is a slight dent, the workshop man will replace the whole side, not for him any tinkering or straightening, no place for damaged goods in his scheme of things.</p>
+      <p>This is the age of youth, the new and the shining. Everyone over the age of fifty is an all fogey and people look at you with the unspoken question, &quot;Are you still there?&quot;, in their eyes. No wonder the old father and mother are looked on as a burden and a nuisance by their children who would like to pack them off to an old age home - as their usefulness is over. In a world where everyone believes that, all that is old and done with, should be thrown out, where is the place for old people? Probably, the fear of being looked on as old and useless, spurs everyone to look as young as they can. Grandmas in their seventies, try to look at least twenty years younger. They will resort to any extremes to shed their wrinkles, hide the grey hair or firm up their sagging bodies. Old men in their early eighties spot wigs to hide their balding heads. &quot;Old or out of date&#x27;&quot; is something nobody wants to associate with. The other day an old venerable leader was described as one whose expiry date had passed. Nobody seems to realise that the old have as much importance as the new or that the old age is the stage to which you graduate after the follies and foibles of youth and middle age. Who has the time for all that? So, off with the old and useless and live in &quot;The Brave New World&quot; of the shining and the new.</p>
+    </div>
+  </main>
+</div>
+
+<script>
+  function applyTheme(t){
+    if(t){ document.documentElement.setAttribute('data-theme', t); }
+    else { document.documentElement.removeAttribute('data-theme'); }
+    document.getElementById('theme-toggle').textContent = (t === 'dark') ? '☀' : '☾';
+  }
+  function toggleTheme(){
+    const current = document.documentElement.getAttribute('data-theme');
+    const next = current === 'dark' ? 'light' : 'dark';
+    applyTheme(next);
+    try{ localStorage.setItem('theme', next); }catch(err){}
+  }
+  (function initTheme(){
+    let saved = null;
+    try{ saved = localStorage.getItem('theme'); }catch(err){}
+    if(saved) applyTheme(saved);
+  })();
+</script>
+
+</body>
+</html>
