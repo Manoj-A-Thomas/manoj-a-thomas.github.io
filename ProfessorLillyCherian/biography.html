@@ -144,16 +144,18 @@
     font-weight: 500;
     color: var(--accent);
   }
-  .placeholder-flag{
-    font-family: "Inter", sans-serif;
-    font-size: 0.72rem;
-    color: var(--accent-soft);
-    border: 1px solid var(--rule);
-    background: var(--paper-raised);
+  .bio-photo-wrap{
     display: inline-block;
-    padding: 3px 9px;
-    border-radius: 3px;
-    margin-bottom: 34px;
+    position: relative;
+    margin: 0 0 32px;
+    transform: rotate(-3deg);
+  }
+  .bio-photo{
+    display: block;
+    width: 140px;
+    height: auto;
+    border-radius: 2px;
+    box-shadow: 0 10px 24px -8px rgba(28,27,24,0.28);
   }
 
   @media (max-width: 560px){
@@ -175,14 +177,16 @@
   <main>
     <div class="bio-header">
       <a class="back-link" href="index.html">← All Essays</a>
+      <span class="bio-photo-wrap">
+        <img class="bio-photo" src="lilly-cherian.jpg" alt="Professor Lilly Cherian">
+      </span>
       <h1>Prof Lilly Cherian</h1>
       <p class="role">Essayist &amp; literary critic</p>
     </div>
     <div class="bio-body">
-      <span class="placeholder-flag">Placeholder — replace with your own biography</span>
-      <p class="drop">This is placeholder text — replace it with your own biography. Lilly Cherian has spent a career moving between the classroom and the page, teaching literary theory while writing essays that range from the personal to the critical — on ageing and identity as readily as on Jakobson, Derrida, and feminist literary criticism.</p>
-      <p>Her essays on this site fall into two loose families: assorted musings drawn from everyday life, and closer readings of the postmodern and post-structuralist theory she has taught for years. She writes, by her own account, because the question "who am I?" turned out to have more interesting partial answers than a single one.</p>
-      <p>A line or two here about education, institutional affiliation, or publications would be a natural next addition — just send the details whenever you'd like them added.</p>
+      <p class="drop">Professor Lilly Cherian has spent a lifetime moving between the classroom, where she taught literary theory by day, and pages of literary books, where she spent whatever hours were left.</p>
+      <p>Her extraordinary double life shows in the essays collected here, which fall into two loose categories: assorted musings drawn from lived experience, and close readings of the postmodern and post-structuralist theory she spent years teaching.</p>
+      <p>Professor Cherian is the author of "Across the Vista of Years", written, by her own account, in the twilight zone of her life. The book is a record of her own years and the decades that carried her through them. It is not a story of famous people or famous events. It is, as she puts it, the story of ordinary people who led ordinary lives, the kind who live and die "unhonoured and unsung." She keeps writing, she says, to give those people an identity, so that the memories that would otherwise fade too soon might linger a little longer.</p>
     </div>
   </main>
 </div>
