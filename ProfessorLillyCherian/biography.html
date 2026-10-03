@@ -157,6 +157,13 @@
     border-radius: 2px;
     box-shadow: 0 10px 24px -8px rgba(28,27,24,0.28);
   }
+  .bio-photo-wrap::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, transparent 52%, var(--paper) 100%);
+    pointer-events: none;
+  }
 
   @media (max-width: 560px){
     header.site{ padding: 44px 0 32px; flex-wrap: wrap; }
