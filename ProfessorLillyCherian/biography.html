@@ -7,183 +7,24 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --paper: #FAFAF6;
-    --paper-raised: #F3F1EA;
-    --ink: #1C1B18;
-    --ink-soft: #57534A;
-    --ink-faint: #8B8578;
-    --rule: #DEDACC;
-    --accent: #2E4A5E;
-    --accent-soft: #5C7A8C;
-    --focus: #2E4A5E;
-    --serif-line: 1.75;
-  }
-  :root:not([data-theme="light"]) {
-    @media (prefers-color-scheme: dark) {
-      --paper: #16150F;
-      --paper-raised: #1D1C15;
-      --ink: #ECE7D9;
-      --ink-soft: #B3AC98;
-      --ink-faint: #786F5C;
-      --rule: #35331F;
-      --accent: #8FB4C9;
-      --accent-soft: #6C93A8;
-      --focus: #8FB4C9;
-    }
-  }
-  :root[data-theme="dark"]{
-    --paper: #16150F;
-    --paper-raised: #1D1C15;
-    --ink: #ECE7D9;
-    --ink-soft: #B3AC98;
-    --ink-faint: #786F5C;
-    --rule: #35331F;
-    --accent: #8FB4C9;
-    --accent-soft: #6C93A8;
-    --focus: #8FB4C9;
-  }
-
-  *{ box-sizing: border-box; }
-  html{ background: var(--paper); }
-  body{
-    margin: 0;
-    background: var(--paper);
-    color: var(--ink);
-    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
-    line-height: var(--serif-line);
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-  }
-  a{ color: inherit; }
-  a:focus-visible, button:focus-visible{
-    outline: 2px solid var(--focus);
-    outline-offset: 3px;
-    border-radius: 2px;
-  }
-
-  .shell{
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 0 28px;
-  }
-
-  header.site{
-    padding: 64px 0 40px;
-    display: flex;
-    align-items: baseline;
-    justify-content: flex-end;
-    gap: 24px;
-  }
-  header.site nav{
-    display: flex;
-    align-items: center;
-    gap: 22px;
-  }
-  header.site nav a, header.site nav button{
-    font-family: "Inter", sans-serif;
-    font-size: 0.82rem;
-    color: var(--ink-soft);
-    text-decoration: none;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    letter-spacing: 0.01em;
-  }
-  header.site nav a:hover, header.site nav button:hover{ color: var(--ink); }
-  #theme-toggle{
-    width: 30px; height: 30px;
-    border-radius: 50%;
-    border: 1px solid var(--rule);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 0.85rem;
-  }
-
-  .bio-header{
-    padding: 0;
-  }
-  .back-link{
-    font-family: "Inter", sans-serif;
-    font-size: 0.8rem;
-    color: var(--ink-faint);
-    text-decoration: none;
-    display: inline-block;
-    margin-bottom: 30px;
-  }
-  .back-link:hover{ color: var(--accent); }
-
-  h1{
-    font-size: 2.15rem;
-    line-height: 1.25;
-    font-weight: 500;
-    margin: 0 0 8px;
-    max-width: 20ch;
-  }
-  .role{
-    font-family: "Inter", sans-serif;
-    font-size: 0.95rem;
-    color: var(--ink-faint);
-    margin: 0 0 44px;
-  }
-
-  .bio-body{
-    padding-bottom: 100px;
-    max-width: 64ch;
-  }
-  .bio-body p{
-    font-size: 1.1rem;
-    margin: 0 0 26px;
-  }
-  .bio-body p.drop::first-letter{
-    font-size: 3.4rem;
-    float: left;
-    line-height: 0.8;
-    padding: 6px 10px 0 0;
-    font-weight: 500;
-    color: var(--accent);
-  }
-  .bio-photo-wrap{
-    display: inline-block;
-    position: relative;
-    margin: 0 auto 26px;
-    transform: rotate(-4deg);
-  }
-  .bio-photo{
-    display: block;
-    width: 132px;
-    height: auto;
-    box-shadow: 0 10px 24px -8px rgba(28,27,24,0.28);
-    border-radius: 1px;
-  }
-  .bio-photo-wrap::after{
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: radial-gradient(circle, transparent 52%, var(--paper) 100%);
-    pointer-events: none;
-  }
-
-  @media (max-width: 560px){
-    header.site{ padding: 44px 0 32px; flex-wrap: wrap; }
-    h1{ font-size: 1.7rem; }
-  }
-</style>
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
 
 <div class="shell">
   <header class="site">
-    <nav>
-      <a href="index.html">Essays</a>
-      <button id="theme-toggle" aria-label="Toggle dark mode" onclick="toggleTheme()">☾</button>
+    <nav aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="random-observations.html">Random Observations</a>
+      <a href="post-modern-literary-criticisms.html">Post-Modern Literary Criticisms</a>
+      <a href="biography.html" aria-current="page">Biography</a>
     </nav>
+    <button id="theme-toggle" aria-label="Toggle dark mode" onclick="toggleTheme()">☾</button>
   </header>
 
   <main>
     <div class="bio-header">
-      <a class="back-link" href="index.html">← All Essays</a>
+      <a class="back-link" href="index.html">← Home</a>
       <span class="bio-photo-wrap">
         <img class="bio-photo" src="lilly-cherian.jpg" alt="Professor Lilly Cherian">
       </span>
@@ -198,24 +39,6 @@
   </main>
 </div>
 
-<script>
-  function applyTheme(t){
-    if(t){ document.documentElement.setAttribute('data-theme', t); }
-    else { document.documentElement.removeAttribute('data-theme'); }
-    document.getElementById('theme-toggle').textContent = (t === 'dark') ? '☀' : '☾';
-  }
-  function toggleTheme(){
-    const current = document.documentElement.getAttribute('data-theme');
-    const next = current === 'dark' ? 'light' : 'dark';
-    applyTheme(next);
-    try{ localStorage.setItem('theme', next); }catch(err){}
-  }
-  (function initTheme(){
-    let saved = null;
-    try{ saved = localStorage.getItem('theme'); }catch(err){}
-    if(saved) applyTheme(saved);
-  })();
-</script>
-
+<script src="site.js"></script>
 </body>
 </html>

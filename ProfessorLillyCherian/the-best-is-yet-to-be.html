@@ -7,154 +7,24 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --paper: #FAFAF6;
-    --paper-raised: #F3F1EA;
-    --ink: #1C1B18;
-    --ink-soft: #57534A;
-    --ink-faint: #8B8578;
-    --rule: #DEDACC;
-    --accent: #2E4A5E;
-    --accent-soft: #5C7A8C;
-    --focus: #2E4A5E;
-    --serif-line: 1.75;
-  }
-  :root:not([data-theme="light"]) {
-    @media (prefers-color-scheme: dark) {
-      --paper: #16150F;
-      --paper-raised: #1D1C15;
-      --ink: #ECE7D9;
-      --ink-soft: #B3AC98;
-      --ink-faint: #786F5C;
-      --rule: #35331F;
-      --accent: #8FB4C9;
-      --accent-soft: #6C93A8;
-      --focus: #8FB4C9;
-    }
-  }
-  :root[data-theme="dark"]{
-    --paper: #16150F;
-    --paper-raised: #1D1C15;
-    --ink: #ECE7D9;
-    --ink-soft: #B3AC98;
-    --ink-faint: #786F5C;
-    --rule: #35331F;
-    --accent: #8FB4C9;
-    --accent-soft: #6C93A8;
-    --focus: #8FB4C9;
-  }
-
-  *{ box-sizing: border-box; }
-  html{ background: var(--paper); }
-  body{
-    margin: 0;
-    background: var(--paper);
-    color: var(--ink);
-    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
-    line-height: var(--serif-line);
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-  }
-  a{ color: inherit; }
-  a:focus-visible, button:focus-visible{
-    outline: 2px solid var(--focus);
-    outline-offset: 3px;
-    border-radius: 2px;
-  }
-
-  .shell{
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 0 28px;
-  }
-
-  header.site{
-    padding: 64px 0 40px;
-    display: flex;
-    align-items: baseline;
-    justify-content: flex-end;
-    gap: 24px;
-  }
-  #theme-toggle{
-    width: 30px; height: 30px;
-    border-radius: 50%;
-    border: 1px solid var(--rule);
-    background: none;
-    cursor: pointer;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 0.85rem;
-    color: var(--ink);
-  }
-
-  .essay-header{
-    padding: 0;
-  }
-  .back-link{
-    font-family: "Inter", sans-serif;
-    font-size: 0.8rem;
-    color: var(--ink-faint);
-    text-decoration: none;
-    display: inline-block;
-    margin-bottom: 30px;
-  }
-  .back-link:hover{ color: var(--accent); }
-
-  .essay-header .meta{
-    font-family: "Inter", sans-serif;
-    font-size: 0.78rem;
-    color: var(--ink-faint);
-    display: flex;
-    gap: 14px;
-    margin-bottom: 18px;
-  }
-  .essay-header h1{
-    font-size: 2.15rem;
-    line-height: 1.25;
-    font-weight: 500;
-    margin: 0 0 20px;
-    max-width: 20ch;
-  }
-  .essay-header .dek{
-    font-size: 1.2rem;
-    color: var(--ink-soft);
-    max-width: 42ch;
-    margin: 0 0 48px;
-  }
-
-  .essay-body{
-    padding-bottom: 100px;
-    max-width: 64ch;
-  }
-  .essay-body p{
-    font-size: 1.1rem;
-    margin: 0 0 26px;
-  }
-  .essay-body p.drop::first-letter{
-    font-size: 3.4rem;
-    float: left;
-    line-height: 0.8;
-    padding: 6px 10px 0 0;
-    font-weight: 500;
-    color: var(--accent);
-  }
-
-  @media (max-width: 560px){
-    header.site{ padding: 44px 0 32px; flex-wrap: wrap; }
-    .essay-header h1{ font-size: 1.7rem; }
-  }
-</style>
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
 
 <div class="shell">
   <header class="site">
+    <nav aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="random-observations.html" aria-current="page">Random Observations</a>
+      <a href="post-modern-literary-criticisms.html">Post-Modern Literary Criticisms</a>
+      <a href="biography.html">Biography</a>
+    </nav>
     <button id="theme-toggle" aria-label="Toggle dark mode" onclick="toggleTheme()">☾</button>
   </header>
 
   <main>
     <div class="essay-header">
-      <a class="back-link" href="index.html">← All Essays</a>
+      <a class="back-link" href="random-observations.html">← Random Observations</a>
       <div class="meta">
         <span>2026</span>
         <span>5 min read</span>
@@ -163,34 +33,16 @@
       <p class="dek">On growing old in the age of AI, Gen Z, and a mind that keeps widening even as the body shrinks.</p>
     </div>
     <div class="essay-body">
-      <p class="drop">Most people in their twilight years suffer from the delusion that, it is time for them to throw in the towel, they are already over the hill. Physical constraints make them feel that, life has nothing more to offer. How ridiculous it is to presume that just because you have spells of breathlessness, just because your legs refuse to take you, where you want to go, just because you are in what Shakespeare calls the six stage of life, &quot;with spectacles down the nose and in slippered pantaloons&quot;, you don&#x27;t have to assume that the curtain is already down.</p>
+      <p class="drop">Most people in their twilight years suffer from the delusion that, it is time for them to throw in the towel, they are already over the hill. Physical constraints make them feel that, life has nothing more to offer. How ridiculous it is to presume that just because you have spells of breathlessness, just because your legs refuse to take you, where you want to go, just because you are in what Shakespeare calls the six stage of life, "with spectacles down the nose and in slippered pantaloons", you don't have to assume that the curtain is already down.</p>
       <p>The body may be frail but what about the mind, if it is still unimpaired? It has the whole universe at its beck and call. You are the monarch of all you survey. Books, journals, newspapers, the TV-all are at your disposal, you can wander at will and have endless adventures in the visual, printed and audio world.</p>
-      <p>And now the AI, the generative as well as the agentic have open up a world of endless possibilities, before us. So what is the need to give up? The body might have left you in the lurch, but there is a &quot;brave new world&quot; waiting for you.</p>
-      <p>Let us take a look around the endless opportunities waiting for you, though you are bound to your arm chair and your room and need help to move around. Your smartphone and TV bring the whole world to you, at the press of a switch. You see the antics of Trump, holding the whole world to random, to feed his megalomania and to nurse his ego, you are thrilled by the boundless enthusiasm of Gen Z and their fearless flying into the &quot;canon&#x27;s mouth&quot; in their zeal to change, &quot;the old order&quot; and usher in a new one. Your heart beats for the hapless people of Ghasa and the Middle East and their endless sufferings. Yes, shut in your little room, you witness everything that happen around.</p>
-      <p>Life is never static, it is dynamic. Every new movement is a moment of change, of evolution. We celebrate, realise that the &#x27;you&#x27; of yesterday is not the &#x27;you&#x27; of today. Your perception, beliefs, attitudes change. You reinvent, reshape, renew yourself every minute of your life. The body may shrink and deteriorate, but as long as the mental and intellectual capacities are intact, the horizon of the mind will be forever widening. New ideas, new thoughts, new perceptions will be enriching it.</p>
-      <p>Life is a learning experience, each new day adds something more to this process. The people we meet, the books we read, the happenings in this ever-changing world, add something to our mental, moral and intellectual evolvement. Even the last and final stage when we are &quot;sans everything, we are still evolving and developing and the process stops only with our last breath. So let us remember, &quot; Rabbi Ben Ezra&#x27;s words, &quot;Grow old along with me, The best is yet to be.&quot;</p>
+      <p>And now the AI, the generative as well as the agentic have open up a world of endless possibilities, before us. So what is the need to give up? The body might have left you in the lurch, but there is a "brave new world" waiting for you.</p>
+      <p>Let us take a look around the endless opportunities waiting for you, though you are bound to your arm chair and your room and need help to move around. Your smartphone and TV bring the whole world to you, at the press of a switch. You see the antics of Trump, holding the whole world to random, to feed his megalomania and to nurse his ego, you are thrilled by the boundless enthusiasm of Gen Z and their fearless flying into the "canon's mouth" in their zeal to change, "the old order" and usher in a new one. Your heart beats for the hapless people of Ghasa and the Middle East and their endless sufferings. Yes, shut in your little room, you witness everything that happen around.</p>
+      <p>Life is never static, it is dynamic. Every new movement is a moment of change, of evolution. We celebrate, realise that the 'you' of yesterday is not the 'you' of today. Your perception, beliefs, attitudes change. You reinvent, reshape, renew yourself every minute of your life. The body may shrink and deteriorate, but as long as the mental and intellectual capacities are intact, the horizon of the mind will be forever widening. New ideas, new thoughts, new perceptions will be enriching it.</p>
+      <p>Life is a learning experience, each new day adds something more to this process. The people we meet, the books we read, the happenings in this ever-changing world, add something to our mental, moral and intellectual evolvement. Even the last and final stage when we are "sans everything, we are still evolving and developing and the process stops only with our last breath. So let us remember, " Rabbi Ben Ezra's words, "Grow old along with me, The best is yet to be."</p>
     </div>
   </main>
 </div>
 
-<script>
-  function applyTheme(t){
-    if(t){ document.documentElement.setAttribute('data-theme', t); }
-    else { document.documentElement.removeAttribute('data-theme'); }
-    document.getElementById('theme-toggle').textContent = (t === 'dark') ? '☀' : '☾';
-  }
-  function toggleTheme(){
-    const current = document.documentElement.getAttribute('data-theme');
-    const next = current === 'dark' ? 'light' : 'dark';
-    applyTheme(next);
-    try{ localStorage.setItem('theme', next); }catch(err){}
-  }
-  (function initTheme(){
-    let saved = null;
-    try{ saved = localStorage.getItem('theme'); }catch(err){}
-    if(saved) applyTheme(saved);
-  })();
-</script>
-
+<script src="site.js"></script>
 </body>
 </html>

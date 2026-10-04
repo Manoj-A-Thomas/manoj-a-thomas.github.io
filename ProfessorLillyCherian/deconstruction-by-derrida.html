@@ -7,154 +7,24 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;1,8..60,400;1,8..60,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    --paper: #FAFAF6;
-    --paper-raised: #F3F1EA;
-    --ink: #1C1B18;
-    --ink-soft: #57534A;
-    --ink-faint: #8B8578;
-    --rule: #DEDACC;
-    --accent: #2E4A5E;
-    --accent-soft: #5C7A8C;
-    --focus: #2E4A5E;
-    --serif-line: 1.75;
-  }
-  :root:not([data-theme="light"]) {
-    @media (prefers-color-scheme: dark) {
-      --paper: #16150F;
-      --paper-raised: #1D1C15;
-      --ink: #ECE7D9;
-      --ink-soft: #B3AC98;
-      --ink-faint: #786F5C;
-      --rule: #35331F;
-      --accent: #8FB4C9;
-      --accent-soft: #6C93A8;
-      --focus: #8FB4C9;
-    }
-  }
-  :root[data-theme="dark"]{
-    --paper: #16150F;
-    --paper-raised: #1D1C15;
-    --ink: #ECE7D9;
-    --ink-soft: #B3AC98;
-    --ink-faint: #786F5C;
-    --rule: #35331F;
-    --accent: #8FB4C9;
-    --accent-soft: #6C93A8;
-    --focus: #8FB4C9;
-  }
-
-  *{ box-sizing: border-box; }
-  html{ background: var(--paper); }
-  body{
-    margin: 0;
-    background: var(--paper);
-    color: var(--ink);
-    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
-    line-height: var(--serif-line);
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-  }
-  a{ color: inherit; }
-  a:focus-visible, button:focus-visible{
-    outline: 2px solid var(--focus);
-    outline-offset: 3px;
-    border-radius: 2px;
-  }
-
-  .shell{
-    max-width: 720px;
-    margin: 0 auto;
-    padding: 0 28px;
-  }
-
-  header.site{
-    padding: 64px 0 40px;
-    display: flex;
-    align-items: baseline;
-    justify-content: flex-end;
-    gap: 24px;
-  }
-  #theme-toggle{
-    width: 30px; height: 30px;
-    border-radius: 50%;
-    border: 1px solid var(--rule);
-    background: none;
-    cursor: pointer;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 0.85rem;
-    color: var(--ink);
-  }
-
-  .essay-header{
-    padding: 0;
-  }
-  .back-link{
-    font-family: "Inter", sans-serif;
-    font-size: 0.8rem;
-    color: var(--ink-faint);
-    text-decoration: none;
-    display: inline-block;
-    margin-bottom: 30px;
-  }
-  .back-link:hover{ color: var(--accent); }
-
-  .essay-header .meta{
-    font-family: "Inter", sans-serif;
-    font-size: 0.78rem;
-    color: var(--ink-faint);
-    display: flex;
-    gap: 14px;
-    margin-bottom: 18px;
-  }
-  .essay-header h1{
-    font-size: 2.15rem;
-    line-height: 1.25;
-    font-weight: 500;
-    margin: 0 0 20px;
-    max-width: 20ch;
-  }
-  .essay-header .dek{
-    font-size: 1.2rem;
-    color: var(--ink-soft);
-    max-width: 42ch;
-    margin: 0 0 48px;
-  }
-
-  .essay-body{
-    padding-bottom: 100px;
-    max-width: 64ch;
-  }
-  .essay-body p{
-    font-size: 1.1rem;
-    margin: 0 0 26px;
-  }
-  .essay-body p.drop::first-letter{
-    font-size: 3.4rem;
-    float: left;
-    line-height: 0.8;
-    padding: 6px 10px 0 0;
-    font-weight: 500;
-    color: var(--accent);
-  }
-
-  @media (max-width: 560px){
-    header.site{ padding: 44px 0 32px; flex-wrap: wrap; }
-    .essay-header h1{ font-size: 1.7rem; }
-  }
-</style>
+<link rel="stylesheet" href="site.css">
 </head>
 <body>
 
 <div class="shell">
   <header class="site">
+    <nav aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="random-observations.html">Random Observations</a>
+      <a href="post-modern-literary-criticisms.html" aria-current="page">Post-Modern Literary Criticisms</a>
+      <a href="biography.html">Biography</a>
+    </nav>
     <button id="theme-toggle" aria-label="Toggle dark mode" onclick="toggleTheme()">☾</button>
   </header>
 
   <main>
     <div class="essay-header">
-      <a class="back-link" href="index.html">← All Essays</a>
+      <a class="back-link" href="post-modern-literary-criticisms.html">← Post-Modern Literary Criticisms</a>
       <div class="meta">
         <span>2026</span>
         <span>9 min read</span>
@@ -163,46 +33,28 @@
       <p class="dek">Structure, Sign and Play asks what holds a structure together, and what happens once you notice that its centre was never a fixed truth to begin with.</p>
     </div>
     <div class="essay-body">
-      <p class="drop">Derrida&#x27;s Structure, Sign and Play in the Discourse of the Human Sciences is a trailblazer in modern literary theory. Published in 1970, it describes Derrida&#x27;s concepts about post-structuralism and deconstruction and also deals with the school of thought associated with them.</p>
+      <p class="drop">Derrida's Structure, Sign and Play in the Discourse of the Human Sciences is a trailblazer in modern literary theory. Published in 1970, it describes Derrida's concepts about post-structuralism and deconstruction and also deals with the school of thought associated with them.</p>
       <p>The essay indirectly refers to many of his theoretical constructs though they are not dealt with directly. The essay is mainly a study of structuralism and post-structuralism. In the essay Derrida introduces a number of terms to explain his theories, like the concept of play.</p>
-      <p>The essay commences with the mention of an &#x27;event&#x27; which has caused a rupture in the view of various philosophical structures. Philosophical studies had always regarded structures, especially the centres of structures as Truths already in existence. The &#x27;event&#x27; that Derrida speaks of, is the realization that the centres of structures are not existent truths but only constructs around which structures are built. This leads to the questioning of the nature of such structures or the &quot;structurality of structures&#x27;. Derrida describes how structures are made, all structures have a centre which is the element within the structure around which all other elements are arranged. It is the centre which holds the shape of the structure as it holds all of its elements together. But in holding the shape of the structure the centre limits what Derrida describes as &#x27;free play&#x27; or the movements of element within the system. The basis of philosophy is questioning and the multiplicity of meaning but by limiting free play the centre limits these two aspects.</p>
-      <p>There is a contradiction involved in the centre as the governing element. Since the centre is the controlling element, it is not open to substitution and hence it is not part of the totality of the structure. Thus the centre is within the structure of the system, since the system cannot exist without it, but it is also outside the system since it cannot participate in the workings of the structure. Actually the centre limits and controls the working of the parts; this dual nature of the centre has been termed &#x27;contradictory coherent&#x27; by Derrida.</p>
-      <p>There is also a concept of centre as a problem for the Saussurian concept of language. According to the Saussarian concept meaning is relational or contingent (dependent) on surrounding elements but if the centre is the origin of all things within the system then the centre is irreplaceable and it has what Derrida calls &#x27;full presence&#x27;. Since the centre cannot be replaced by other elements within the system it cannot be defined in relation to them. The idea that the centre is &#x27;transcendental signified&#x27; or the ultimate source of meaning breaks down the arbitrary nature of signifier and signified. The very nature of the structure of the system can be discussed only by using the language or discourse of that system, hence all systems have some kind of centre.</p>
-      <p>Anthropological studies provide an example of a decentering system. Earlier anthropologists held the view that western European societies were the centres of civilization or the standards by which other civilizations could be measured. But this centred view of civilization broke down when anthropologists found that cultures are autonomous systems, existing on their own terms and not in relation to western civilization. This leads to Levi Strauss&#x27;s view of culture according to which culture is made up of binary oppositions – pairs that give each other value because they are what the other is not- light/dark, male/female, nature/culture etc. The first is regarded as superior to the second. Derrida deconstructs this view through the use of the nature/culture binary. According to Levi Strauss what is natural is what is universal and what is cultural is dictated by the standard of a specific social organization; the deconstruction of this binary comes when a concept such as incest is introduces on both sides of the slash. Incest is universally taboo thoughit is dealt in different ways in different cultures. This disruption of binary oppositions is the essence of deconstruction. The stability of a structure is questioned when such oppositions are put into play and when something can fit both sides or when the relationship is unequal or there is more than one thing on one side or one side is empty.</p>
+      <p>The essay commences with the mention of an 'event' which has caused a rupture in the view of various philosophical structures. Philosophical studies had always regarded structures, especially the centres of structures as Truths already in existence. The 'event' that Derrida speaks of, is the realization that the centres of structures are not existent truths but only constructs around which structures are built. This leads to the questioning of the nature of such structures or the "structurality of structures'. Derrida describes how structures are made, all structures have a centre which is the element within the structure around which all other elements are arranged. It is the centre which holds the shape of the structure as it holds all of its elements together. But in holding the shape of the structure the centre limits what Derrida describes as 'free play' or the movements of element within the system. The basis of philosophy is questioning and the multiplicity of meaning but by limiting free play the centre limits these two aspects.</p>
+      <p>There is a contradiction involved in the centre as the governing element. Since the centre is the controlling element, it is not open to substitution and hence it is not part of the totality of the structure. Thus the centre is within the structure of the system, since the system cannot exist without it, but it is also outside the system since it cannot participate in the workings of the structure. Actually the centre limits and controls the working of the parts; this dual nature of the centre has been termed 'contradictory coherent' by Derrida.</p>
+      <p>There is also a concept of centre as a problem for the Saussurian concept of language. According to the Saussarian concept meaning is relational or contingent (dependent) on surrounding elements but if the centre is the origin of all things within the system then the centre is irreplaceable and it has what Derrida calls 'full presence'. Since the centre cannot be replaced by other elements within the system it cannot be defined in relation to them. The idea that the centre is 'transcendental signified' or the ultimate source of meaning breaks down the arbitrary nature of signifier and signified. The very nature of the structure of the system can be discussed only by using the language or discourse of that system, hence all systems have some kind of centre.</p>
+      <p>Anthropological studies provide an example of a decentering system. Earlier anthropologists held the view that western European societies were the centres of civilization or the standards by which other civilizations could be measured. But this centred view of civilization broke down when anthropologists found that cultures are autonomous systems, existing on their own terms and not in relation to western civilization. This leads to Levi Strauss's view of culture according to which culture is made up of binary oppositions – pairs that give each other value because they are what the other is not- light/dark, male/female, nature/culture etc. The first is regarded as superior to the second. Derrida deconstructs this view through the use of the nature/culture binary. According to Levi Strauss what is natural is what is universal and what is cultural is dictated by the standard of a specific social organization; the deconstruction of this binary comes when a concept such as incest is introduces on both sides of the slash. Incest is universally taboo thoughit is dealt in different ways in different cultures. This disruption of binary oppositions is the essence of deconstruction. The stability of a structure is questioned when such oppositions are put into play and when something can fit both sides or when the relationship is unequal or there is more than one thing on one side or one side is empty.</p>
       <p>Bricolage</p>
-      <p>A deconstructed system can be either thrown out or it can be used under the view that it has flaws. In the second option the system is seen as being built around a central idea that is not an absolute truth but a construct or even an illusion. This is the concept of bricolage or the use of a system to get a job done without worrying to see if the system is &#x27;true&#x27;. The second option is emphasized over the first especially in terms of Levi Strauss, according to him bricoleur is someone who uses the means at hand (instruments around him, inherited concepts) and by trial and error adapts them, not hesitating to change them when necessary. For Derrida, bricolage is critical language itself. Levi Strauss contrasts the bricoleur with the engineer who should be the one to construct the totality of his language, syntax and lexicon. In this the engineer is a myth.</p>
+      <p>A deconstructed system can be either thrown out or it can be used under the view that it has flaws. In the second option the system is seen as being built around a central idea that is not an absolute truth but a construct or even an illusion. This is the concept of bricolage or the use of a system to get a job done without worrying to see if the system is 'true'. The second option is emphasized over the first especially in terms of Levi Strauss, according to him bricoleur is someone who uses the means at hand (instruments around him, inherited concepts) and by trial and error adapts them, not hesitating to change them when necessary. For Derrida, bricolage is critical language itself. Levi Strauss contrasts the bricoleur with the engineer who should be the one to construct the totality of his language, syntax and lexicon. In this the engineer is a myth.</p>
       <p>Totalization</p>
       <p>Is the desire to have a system, a theory or a philosophy that explains everything. The puritans has a totalizing system. God at the centre is the source and origin of everything and reference to god explains everything that happens. According to Derrida totalization is impossible, no philosophy or system can explain everything. This is because of two reasons: one, there may be too much to say within a closed system, two, there may be too much play among the various elements – elements cannot be fixed and measured and accounted for. Resulting in a lack of centre and an unfixed jumble of elements. This is like a kindergarten class, totalization would be like taking attendance. It is impossible if there are a million kids even if they are all sitting down, it is also not possible even if there are only 14 kids, if they are running all around. When a system lacks a centre play becomes infinite. When a system has a centre play is limited or eliminated. All systems fall between the two.</p>
       <p>Supplementary</p>
       <p>Another concept of Derrida. The idea develops out of the idea of free play within structures. Due to the nature of structure the centre does not employ a position in a binary opposition because it I viewed as a privileged term or element. However such a term cannot be conceived without some sort of a comparison to a supplement or something that it is not. Structures naturally deconstruct themselves due to this problematic contradiction. The centre must be viewed in terms of the supplement but it is assumed as coming before the other term. However with the introduction of free play within the system the order can be reversed or questioned and the resulting removal of privilege from the supposed centre cause the system to breakdown because the integrity of the binary opposition is compromised. Consequently there exists no authoritative centre from which guaranteed facts can emerge but two contradictory truths existing side by side.</p>
       <p>Philosophical studies and structures:</p>
       <p>1. the structurality of structures.</p>
-      <p>Derrida speaks of an event which has occurred within history which has caused a &quot;rupture&quot;&quot;in the view of various philosophical structures.</p>
-      <p>2. Historically philosophical studies have accepted structures and especially, the centers of such structures as truths which were already in existence. It is the realization that these centers are not existent truths but constructs around which structures are built that provides the &quot;event&quot;, which calls for the introspective questioning of the nature of such structures or &quot;the structurality of structures&quot;. Derrida describes how structures are constructed- all structures have a centre-the element within the structure that all other elements therein refer to and are arranged around. The centre serves to hold the shape of the structure by holding elements together. In holding the shape of the structure, the centre limits what Derrida calls &quot;free play&quot; or movement of the elements within the system. This lack of ability to play ties elements too strictly and does not allow for the questioning and multiplicity of meaning that is the basis of philosophy.</p>
+      <p>Derrida speaks of an event which has occurred within history which has caused a "rupture""in the view of various philosophical structures.</p>
+      <p>2. Historically philosophical studies have accepted structures and especially, the centers of such structures as truths which were already in existence. It is the realization that these centers are not existent truths but constructs around which structures are built that provides the "event", which calls for the introspective questioning of the nature of such structures or "the structurality of structures". Derrida describes how structures are constructed- all structures have a centre-the element within the structure that all other elements therein refer to and are arranged around. The centre serves to hold the shape of the structure by holding elements together. In holding the shape of the structure, the centre limits what Derrida calls "free play" or movement of the elements within the system. This lack of ability to play ties elements too strictly and does not allow for the questioning and multiplicity of meaning that is the basis of philosophy.</p>
       <p>Duality as contradictory coherent.</p>
       <p>The centre is the governing element of the structure. It cannot be substituted</p>
     </div>
   </main>
 </div>
 
-<script>
-  function applyTheme(t){
-    if(t){ document.documentElement.setAttribute('data-theme', t); }
-    else { document.documentElement.removeAttribute('data-theme'); }
-    document.getElementById('theme-toggle').textContent = (t === 'dark') ? '☀' : '☾';
-  }
-  function toggleTheme(){
-    const current = document.documentElement.getAttribute('data-theme');
-    const next = current === 'dark' ? 'light' : 'dark';
-    applyTheme(next);
-    try{ localStorage.setItem('theme', next); }catch(err){}
-  }
-  (function initTheme(){
-    let saved = null;
-    try{ saved = localStorage.getItem('theme'); }catch(err){}
-    if(saved) applyTheme(saved);
-  })();
-</script>
-
+<script src="site.js"></script>
 </body>
 </html>
